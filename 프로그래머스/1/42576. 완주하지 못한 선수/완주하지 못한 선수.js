@@ -1,0 +1,17 @@
+function solution(participant, completion) {
+
+  var answer = '';
+
+
+  const sortedParticipant = participant.sort();
+  const sortedCompletion = completion.sort();
+
+  for(let i = 0; i < sortedParticipant.length; i++) {
+    if(sortedParticipant[i] !== sortedCompletion[i]) {
+      answer = sortedParticipant[i];
+      break;
+    }
+  }
+
+  return answer;
+}
